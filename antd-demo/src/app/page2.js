@@ -24,7 +24,7 @@ const HomePage = () => {
         <Menu.Item key="3">Printed Life-studies</Menu.Item>
         <Menu.Item key="4">Schedule</Menu.Item>
         <Menu.Item key="5">Newsletters</Menu.Item>
-        <Menu.Item key="6">Scruotyre & Cinnebtary</Menu.Item>
+        <Menu.Item key="6">Scripture & Commentary</Menu.Item>
         <Menu.Item key="7">Contact Us</Menu.Item>
 
       </Menu>

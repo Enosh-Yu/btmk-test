@@ -45,7 +45,7 @@ const App = () => {
       <Menu
         mode="horizontal"
         defaultSelectedKeys={['2']}
-        style={{ background: 'white', align: 'center'}}
+        style={{ background: 'white',}}
         >
         <Menu.Item key="11"><img src="/listen.png" /><br/>Listen to Programs</Menu.Item>
         <Menu.Item key="12"><img src="/read.png" /><br/>Read Life-Studies</Menu.Item>
