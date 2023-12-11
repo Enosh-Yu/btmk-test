@@ -13,6 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
+      <div className='logo' style={{ background: 'white', padding: 12}}>
+        <img src="/logo-only.gif" width="64" height="64" />
+        Living Stream Ministry<br />Life-study of the Bible Radio Broadcast</div>
         {children}
       </body>
     </html>
