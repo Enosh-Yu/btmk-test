@@ -4,6 +4,8 @@ import { Layout, Menu, theme } from 'antd';
 
 const { Header, Content, Footer } = Layout;
 
+import { HomeOutlined } from '@ant-design/icons';
+
 
 const App = () => {
   const {
@@ -39,7 +41,7 @@ const App = () => {
         defaultSelectedKeys={['1']}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="1"><a href="/">Home</a></Menu.Item>
+        <Menu.Item key="1"><a href="/"><HomeOutlined /></a></Menu.Item>
         <Menu.Item key="2"><a href="/programs">Programs</a></Menu.Item>
         <Menu.Item key="3"><a href="/printed-life-studies">Printed Life-studies</a></Menu.Item>
         <Menu.Item key="4"><a href="/schedule">Schedule</a></Menu.Item>

@@ -3,6 +3,8 @@ import React from 'react';
 
 import { Breadcrumb, Layout, Menu, theme, Tabs } from 'antd';
 
+import { HomeOutlined } from '@ant-design/icons';
+
 const { Header, Content, Footer } = Layout;
 
 const onChange = (key) => {
@@ -42,7 +44,7 @@ const App = () => {
         defaultSelectedKeys={['2']}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="1"><a href="/">Home</a></Menu.Item>
+        <Menu.Item key="1"><a href="/"><HomeOutlined/></a></Menu.Item>
         <Menu.Item key="2"><a href="/programs">Programs</a></Menu.Item>
         <Menu.Item key="3"><a href="/printed-life-studies">Printed Life-studies</a></Menu.Item>
         <Menu.Item key="4"><a href="/schedule">Schedule</a></Menu.Item>
