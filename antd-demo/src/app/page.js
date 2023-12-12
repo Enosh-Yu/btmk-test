@@ -1,5 +1,7 @@
 'use client'
-import React from 'react';
+
+import Link from 'next/link'
+
 import { Layout, Menu, theme } from 'antd';
 
 const { Header, Content, Footer } = Layout;
@@ -14,12 +16,12 @@ const App = () => {
   return (
     <Layout className="layout">
 
-      <Header
+      {/* <Header
         style={{
           display: 'flex',
           alignItems: 'center',
         }}
-      >
+      > */}
         {/* <div className="demo-logo" />
         <Menu
           theme="dark"
@@ -35,21 +37,25 @@ const App = () => {
           })}
         />
         <div className="menu" /> */}
+
+    <Header>
+      <div className="menu" />
+
       <Menu
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['1']}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="1"><a href="/"><HomeOutlined /></a></Menu.Item>
-        <Menu.Item key="2"><a href="/programs">Programs</a></Menu.Item>
-        <Menu.Item key="3"><a href="/printed-life-studies">Printed Life-studies</a></Menu.Item>
-        <Menu.Item key="4"><a href="/schedule">Schedule</a></Menu.Item>
-        <Menu.Item key="5"><a href="/newsletters">Newsletters</a></Menu.Item>
-        <Menu.Item key="6"><a href="/scripture-commentary">Scripture & Commentary</a></Menu.Item>
-        <Menu.Item key="7"><a href="/contact-us">Contact Us</a></Menu.Item>
+        <Menu.Item key="1"><Link href="/"><HomeOutlined /></Link></Menu.Item>
+        <Menu.Item key="2"><Link href="/programs">Programs</Link></Menu.Item>
+        <Menu.Item key="3"><Link href="/printed-life-studies">Printed Life-studies</Link></Menu.Item>
+        <Menu.Item key="4"><Link href="/schedule">Schedule</Link></Menu.Item>
+        <Menu.Item key="5"><Link href="/newsletters">Newsletters</Link></Menu.Item>
+        <Menu.Item key="6"><Link href="/scripture-commentary">Scripture & Commentary</Link></Menu.Item>
+        <Menu.Item key="7"><Link href="/contact-us">Contact Us</Link></Menu.Item>
       </Menu>
-      </Header>
+    </Header>
 
       <div style={{ background: 'beige', padding: 12, minHeight: 90, textAlign: 'right'}}>
         <h2>Life-study of the Bible<br></br>
@@ -57,7 +63,7 @@ const App = () => {
         A 30-minute Radio Broadcast<br></br>
         Composed of Excerpts from Witness Lee's Spoken Ministry</h2></div>
 
-      <Content  style={{ padding: '0 0px', }}>
+      <Content  style={{ background: 'white', padding: '0 0px', }}>
       <Menu
         mode="horizontal"
         style={{ background: 'white',}}
@@ -67,7 +73,7 @@ const App = () => {
         <Menu.Item key="13"><img src="/broadcast.png" /><br/>Get Today's Broadcast</Menu.Item>
         </Menu>
 
-    <div style={{ background: 'white', padding: 12, minHeight:240}}>
+    <div style={{ padding: 12, minHeight:240}}>
        <section><p> About Life-study of the Bible with Witness Lee<br/>
 Life-study of the Bible with Witness Lee is a 30-minute radio broadcast composed of excerpts from Witness Lee's spoken ministry that focuses on the enjoyment of the divine life as revealed in the Scriptures. The ministry portions are followed by a discussion of the portion presented, including questions and answers.</p>
 
@@ -82,7 +88,7 @@ The ministry of Watchman Nee has been nourishing and edifying seeking believers 
         mode="horizontal"
         style={{ background: 'beige', lineHeight: '48px' }}
       >
-        <Menu.Item key="8"><a href="8.html">Today's Broadcast</a></Menu.Item>
+        <Menu.Item key="8"><Link href="8.html">Today's Broadcast</Link></Menu.Item>
         <Menu.Item key="9">Other LSM Sites</Menu.Item>
         <Menu.Item key="10">Espanol</Menu.Item>
     </Menu>

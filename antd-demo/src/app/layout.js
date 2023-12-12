@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from 'next/link'
 
 import './lib/AntdRegistry'
 
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html>
       <body>
       <div className='logo' style={{ background: 'white', padding: 6}}>
-        <section><a href="/"><img src="/logo-only.gif" width="64" height="64" /></a>
+        <section><Link href="/"><img src="/logo-only.gif" width="64" height="64" /></Link>
         <p>Living Stream Ministry<br />Life-study of the Bible Radio Broadcast</p></section></div>
         {children}
       </body>

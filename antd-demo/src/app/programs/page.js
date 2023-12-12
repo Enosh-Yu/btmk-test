@@ -1,7 +1,7 @@
 'use client'
-import React from 'react';
+import Link from 'next/link'
 
-import { Breadcrumb, Layout, Menu, theme, Tabs } from 'antd';
+import { Breadcrumb, Layout, Menu, theme, Tabs, Card } from 'antd';
 
 import { HomeOutlined } from '@ant-design/icons';
 
@@ -14,15 +14,12 @@ const onChange = (key) => {
     {
       key: '1',
       label: 'Old Testament',
-      children: 'Content 1',
     },
     {
       key: '2',
       label: 'New Testament',
-      children: 'Content 2',
     },
   ];
-
 
 
 const App = () => {
@@ -32,27 +29,24 @@ const App = () => {
   
    return (
     <Layout className="layout">
-      <Header
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+    <Header>
+      <div className="menu" />
+
       <Menu
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['2']}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="1"><a href="/"><HomeOutlined/></a></Menu.Item>
-        <Menu.Item key="2"><a href="/programs">Programs</a></Menu.Item>
-        <Menu.Item key="3"><a href="/printed-life-studies">Printed Life-studies</a></Menu.Item>
-        <Menu.Item key="4"><a href="/schedule">Schedule</a></Menu.Item>
-        <Menu.Item key="5"><a href="/newsletters">Newsletters</a></Menu.Item>
-        <Menu.Item key="6"><a href="/scripture-commentary">Scripture & Commentary</a></Menu.Item>
-        <Menu.Item key="7"><a href="/contact-us">Contact Us</a></Menu.Item>
+        <Menu.Item key="1"><Link href="/"><HomeOutlined /></Link></Menu.Item>
+        <Menu.Item key="2"><Link href="/programs">Programs</Link></Menu.Item>
+        <Menu.Item key="3"><Link href="/printed-life-studies">Printed Life-studies</Link></Menu.Item>
+        <Menu.Item key="4"><Link href="/schedule">Schedule</Link></Menu.Item>
+        <Menu.Item key="5"><Link href="/newsletters">Newsletters</Link></Menu.Item>
+        <Menu.Item key="6"><Link href="/scripture-commentary">Scripture & Commentary</Link></Menu.Item>
+        <Menu.Item key="7"><Link href="/contact-us">Contact Us</Link></Menu.Item>
       </Menu>
-      </Header>
+    </Header>
       <div style={{ background: 'beige', minHeight: 30 }}>
         <h2>Radio Programs</h2></div>
         <Breadcrumb
@@ -60,22 +54,22 @@ const App = () => {
             margin: '8px 8px',
           }}
         >
-          <Breadcrumb.Item><a href="/">Home</a></Breadcrumb.Item>
+          <Breadcrumb.Item><Link href="/">Home</Link></Breadcrumb.Item>
           <Breadcrumb.Item>Programs</Breadcrumb.Item>
         </Breadcrumb>     
 
-      <Content  style={{ padding: '0 0px', }}>
-      <div style={{ background: 'white', padding: 12, minHeight:240}}>
+      <Content  style={{ background: 'white', padding: '0 0px', }}>
+      <div style={{ padding: 12, minHeight:240}}>
 
       <section>* Programs may be downloaded for personal use.</section>
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-        
+        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+          <h2> Old Testament </h2>
+              <Card></Card>
+              <Card></Card>
+              <Card></Card>
+              <Card></Card>
+              <Card></Card>
 
-      
-      
-      
-      
-      
       </div>
       
       </Content>
