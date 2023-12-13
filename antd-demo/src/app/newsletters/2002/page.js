@@ -91,32 +91,52 @@ const App = () => {
           }}
         >
           <Breadcrumb.Item><Link href="/">Home</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>Radio Newsletters</Breadcrumb.Item>
+          <Breadcrumb.Item><Link href="/newsletters">Radio Newsletters</Link></Breadcrumb.Item>
+          <Breadcrumb.Item>2002</Breadcrumb.Item>
         </Breadcrumb>     
 
       <Content  style={{ padding: '0 0px', background: 'white'}}>
       <div style={{ padding: 12}}>
-        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+        <Tabs defaultActiveKey="6" items={items} onChange={onChange} />
+          <h2> 2002 </h2>
+          <Card>
+            <h3>January <FilePdfOutlined /></h3>
+          </Card>
+          <Card>            
+            <h3>February <FilePdfOutlined /></h3>
+          </Card>
+          <Card>
+            <h3>March <FilePdfOutlined /></h3>
+          </Card>
+          <Card>            
+            <h3>April <FilePdfOutlined /></h3>
+          </Card>
+          <Card>
+          <h3>May <FilePdfOutlined /></h3>
+          </Card>
+          <Card>            
+            <h3>June <FilePdfOutlined /></h3>
+          </Card>
+          <Card>
+          <h3>July <FilePdfOutlined /></h3>
+          </Card>
+          <Card>            
+            <h3>August <FilePdfOutlined /></h3>
+          </Card>
+          <Card>
+          <h3>September <FilePdfOutlined /></h3>
+          </Card>
+          <Card>            
+            <h3>October <FilePdfOutlined /></h3>
+          </Card>
+          <Card>
+          <h3>November <FilePdfOutlined /></h3>
+          </Card>
+          <Card>            
+            <h3>December <FilePdfOutlined /></h3>
+          </Card>
+ 
       <Divider /></div>
-      <section><div>
-        <Card style={{ display: 'flex', backgroundColor: 'lightgray', color: 'darkblue' }}>
-        <p>“He therefore who bountifully supplies to you the Spirit...does he do it out of the works of law or out of the hearing of faith?”</p>
-        <p style={{textAlign: 'right'}}>Galatians 3:5</p>
-      </Card>
-          <p>Life-study of the Bible, a monumental and classic work by Witness Lee, builds upon and is a further development of all that the Lord has revealed to His church in the past centuries. It is filled with the revelation concerning the processed Triune God, the living Christ, the life-giving Spirit, the experience of life, and the definition and practice of the church.</p>
-        <p>Also see "What is the Life-study of the Bible?".</p></div>
-        <div><img src="hearing-of-faith.png" width="200" height="200"/></div>      
-        </section>
-   
-
-   
-
-      
-      
-      
-      
-      
-
       
       </Content>
    

@@ -54,8 +54,11 @@ const items = [
   {
     key: '11',
     label: <Link href="/newsletters/whatis">{'"What is..." Articles'}</Link>,
+
+    label: '"What is..." Articles',
   },
 ];
+
 
 const App = () => {
   const {
@@ -91,32 +94,26 @@ const App = () => {
           }}
         >
           <Breadcrumb.Item><Link href="/">Home</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>Radio Newsletters</Breadcrumb.Item>
+          <Breadcrumb.Item><Link href="/newsletters">Radio Newsletters</Link></Breadcrumb.Item>
+          <Breadcrumb.Item>2006-2007</Breadcrumb.Item>
         </Breadcrumb>     
 
       <Content  style={{ padding: '0 0px', background: 'white'}}>
       <div style={{ padding: 12}}>
-        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+        <Tabs defaultActiveKey="2" items={items} onChange={onChange} />
+          <h2> 2006 </h2>
+          <Card>
+            <h3>March <FilePdfOutlined /></h3>
+          </Card>
+          <Card>            
+            <h3>September <FilePdfOutlined /></h3>
+          </Card>
+          <h2> 2007 </h2>
+          <Card>
+          <h3>March <FilePdfOutlined /></h3>
+          </Card>
+ 
       <Divider /></div>
-      <section><div>
-        <Card style={{ display: 'flex', backgroundColor: 'lightgray', color: 'darkblue' }}>
-        <p>“He therefore who bountifully supplies to you the Spirit...does he do it out of the works of law or out of the hearing of faith?”</p>
-        <p style={{textAlign: 'right'}}>Galatians 3:5</p>
-      </Card>
-          <p>Life-study of the Bible, a monumental and classic work by Witness Lee, builds upon and is a further development of all that the Lord has revealed to His church in the past centuries. It is filled with the revelation concerning the processed Triune God, the living Christ, the life-giving Spirit, the experience of life, and the definition and practice of the church.</p>
-        <p>Also see "What is the Life-study of the Bible?".</p></div>
-        <div><img src="hearing-of-faith.png" width="200" height="200"/></div>      
-        </section>
-   
-
-   
-
-      
-      
-      
-      
-      
-
       
       </Content>
    
