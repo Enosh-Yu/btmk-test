@@ -1,11 +1,32 @@
 'use client'
 import Link from 'next/link'
 
-import { Breadcrumb, Layout, Menu, theme, Tabs, Card, Cascader } from 'antd';
+import { Breadcrumb, Layout, Menu, theme, Tabs, Card, Cascader, Button, Flex, Collapse } from 'antd';
 
-import { HomeOutlined } from '@ant-design/icons';
+import { HomeOutlined, LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
+
+const items = [
+  {
+    key: '1',
+    label: 'The General Sketch and Central Thought (1)',
+    children: <p>Title: The General Sketch and Central Thought (1)<br/>
+    Scripture: varied<br/>
+    Speaker: WL/RK<br/>
+    Life-study: Message 1</p>,
+  },
+  {
+    key: '2',
+    label: 'This is panel header 2',
+    children: <p></p>,
+  },
+  {
+    key: '3',
+    label: 'This is panel header 3',
+    children: <p></p>,
+  },
+];
 
 const options = [
   {
@@ -28,16 +49,6 @@ const onChangeCas = (value) => {
 const onChange = (key) => {
     key;
   };
-  const items = [
-    {
-      key: '1',
-      label: 'Old Testament',
-    },
-    {
-      key: '2',
-      label: <Link href="/programs/new">{'New Testament'}</Link>,
-    },
-  ];
 
 
 const App = () => {
@@ -73,22 +84,24 @@ const App = () => {
           }}
         >
           <Breadcrumb.Item><Link href="/">Home</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>Programs</Breadcrumb.Item>
+          <Breadcrumb.Item><Link href="/programs">Programs</Link></Breadcrumb.Item>
+          <Breadcrumb.Item>Genesis</Breadcrumb.Item>
         </Breadcrumb>     
 
       <Content  style={{ background: 'white', padding: '0 0px', }}>
       <div style={{ padding: 12, minHeight:240}}>
 
-      <section><p>* Programs may be downloaded for personal use.</p>
-      <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
-      </section>
-        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-          <h2> Old Testament </h2>
-              <Card><Link href="/programs/old/genesis">Genesis</Link></Card>
-              <Card><Link href="/programs/old/exodus">Exodus</Link></Card>
-              <Card>Leviticus</Card>
-              <Card>Numbers</Card>
-              <Card>Deuteronomy</Card>
+      <p>Life-study of the Bible with Witness Lee is a 30-minute radio broadcast composed of excerpts from Witness Lee's spoken ministry that focuses on the enjoyment of the divine life as revealed in the Scriptures. The ministry portions are followed by a discussion of the portion presented, including questions and answers.</p>
+        <section>
+          <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
+        <Flex gap="small" wrap="wrap">
+          <Button disabled="true"><LeftCircleOutlined/>Prev</Button>
+          <Link href="./exodus"><Button>Next<RightCircleOutlined/></Button></Link>
+        </Flex>
+        </section>
+          <h2> Genesis (134) </h2>
+          <p>Subject: God Created, Satan Corrupted, Man Fell, and Jehovah Promised to Save</p>
+          <Collapse items={items} defaultActiveKey={['1']} onChange={onChange} />
 
       </div>
       

@@ -1,44 +1,25 @@
 'use client'
 import Link from 'next/link'
 
-import { Breadcrumb, Layout, Menu, theme, Tabs, Card, Cascader } from 'antd';
+import { Breadcrumb, Layout, Menu, theme, Tabs, Card } from 'antd';
 
 import { HomeOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
-const options = [
+const onChange = (key) => {
+  key;
+};
+const items = [
   {
-    value: 'Old Testament',
-    label: 'Old Testament',
+    key: '1',
+  label: <Link href="/schedule">{'United States'}</Link>,
   },
   {
-    value: 'Genesis',
-    label: <Link href="/programs/old/genesis">{'Genesis'}</Link>,
-  },
-  {
-    value: 'Exodus',
-    label: <Link href="/programs/old/exodus">{'Exodus'}</Link>,
+    key: '2',
+    label: 'International',
   },
 ];
-const onChangeCas = (value) => {
-  value;
-};
-
-const onChange = (key) => {
-    key;
-  };
-  const items = [
-    {
-      key: '1',
-      label: 'Old Testament',
-    },
-    {
-      key: '2',
-      label: <Link href="/programs/new">{'New Testament'}</Link>,
-    },
-  ];
-
 
 const App = () => {
   const {
@@ -53,7 +34,7 @@ const App = () => {
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={['2']}
+        defaultSelectedKeys={['4']}
         style={{ lineHeight: '64px' }}
       >
         <Menu.Item key="1"><Link href="/"><HomeOutlined /></Link></Menu.Item>
@@ -66,30 +47,26 @@ const App = () => {
       </Menu>
     </Header>
       <div style={{ background: 'beige', minHeight: 30 }}>
-        <h2>Radio Programs</h2></div>
+        <h2>Broadcast Schedule</h2></div>
         <Breadcrumb
           style={{
             margin: '8px 8px',
           }}
         >
           <Breadcrumb.Item><Link href="/">Home</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>Programs</Breadcrumb.Item>
+          <Breadcrumb.Item>Broadcast Schedule: International</Breadcrumb.Item>
         </Breadcrumb>     
 
-      <Content  style={{ background: 'white', padding: '0 0px', }}>
-      <div style={{ padding: 12, minHeight:240}}>
-
-      <section><p>* Programs may be downloaded for personal use.</p>
-      <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
-      </section>
-        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-          <h2> Old Testament </h2>
-              <Card><Link href="/programs/old/genesis">Genesis</Link></Card>
-              <Card><Link href="/programs/old/exodus">Exodus</Link></Card>
-              <Card>Leviticus</Card>
-              <Card>Numbers</Card>
-              <Card>Deuteronomy</Card>
-
+      <Content  style={{ padding: '0 0px', background: 'white' }}>
+      <div style={{ padding: 12 }}>
+        <Tabs defaultActiveKey="2" items={items} onChange={onChange} />
+          <h2> International </h2>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>  
+      
       </div>
       
       </Content>
@@ -103,9 +80,10 @@ const App = () => {
         <Menu.Item key="9">Other LSM Sites</Menu.Item>
         <Menu.Item key="10">Espanol</Menu.Item>
     </Menu>
-      <Footer style={{ textAlign: 'center', }}>
+     <Footer style={{ textAlign: 'center', }}>
       © 1997-2023 Living Stream Ministry. All rights reserved. Reproduction in whole or in part is prohibited.
-      </Footer>
+        </Footer>
+
     </Layout>
   );
 };

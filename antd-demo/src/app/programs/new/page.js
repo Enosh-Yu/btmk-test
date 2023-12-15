@@ -31,11 +31,11 @@ const onChange = (key) => {
   const items = [
     {
       key: '1',
-      label: 'Old Testament',
+      label: <Link href="/programs/old">{'Old Testament'}</Link>,
     },
     {
       key: '2',
-      label: <Link href="/programs/new">{'New Testament'}</Link>,
+      label: 'New Testament',
     },
   ];
 
@@ -82,13 +82,13 @@ const App = () => {
       <section><p>* Programs may be downloaded for personal use.</p>
       <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
       </section>
-        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-          <h2> Old Testament </h2>
-              <Card><Link href="/programs/old/genesis">Genesis</Link></Card>
-              <Card><Link href="/programs/old/exodus">Exodus</Link></Card>
-              <Card>Leviticus</Card>
-              <Card>Numbers</Card>
-              <Card>Deuteronomy</Card>
+        <Tabs defaultActiveKey="2" items={items} onChange={onChange} />
+          <h2> New Testament </h2>
+              <Card>Mattew</Card>
+              <Card>Mark</Card>
+              <Card>Luke</Card>
+              <Card>John</Card>
+              <Card>Acts</Card>
 
       </div>
       

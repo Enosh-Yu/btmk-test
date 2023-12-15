@@ -13,13 +13,12 @@ const onChange = (key) => {
 const items = [
   {
     key: '1',
-    label: 'United States',
-
+    label: 'United States',  
+  
   },
   {
     key: '2',
-    label: 'International',
-
+    label: <Link href="/schedule/int">{'International'}</Link>,
   },
 ];
 
