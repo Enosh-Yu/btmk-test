@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Breadcrumb, Layout, Menu, theme, Tabs, Card, Cascader } from 'antd';
 
-import { HomeOutlined } from '@ant-design/icons';
+import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
@@ -84,7 +84,7 @@ const App = () => {
       </section>
         <Tabs defaultActiveKey="2" items={items} onChange={onChange} />
           <h2> New Testament </h2>
-              <Card>Mattew</Card>
+              <Card>Matthew</Card>
               <Card>Mark</Card>
               <Card>Luke</Card>
               <Card>John</Card>
@@ -99,9 +99,9 @@ const App = () => {
         mode="horizontal"
         style={{ background: 'beige', lineHeight: '48px' }}
       >
-        <Menu.Item key="8">Today's Broadcast</Menu.Item>
-        <Menu.Item key="9">Other LSM Sites</Menu.Item>
-        <Menu.Item key="10">Espanol</Menu.Item>
+        <Menu.Item key="8"><Link href="/todays-broadcast" style={{color:"brown"}}><PlayCircleFilled /> Today's Broadcast</Link></Menu.Item>
+        <Menu.Item key="9"><Link href="/links" style={{color:"brown"}}><LinkOutlined /> Other LSM Sites</Link></Menu.Item>
+        <Menu.Item key="10" ><Link href="https://www.radiolsm.com/index.html" style={{color:"brown"}}><TranslationOutlined /> Espanol</Link></Menu.Item>
     </Menu>
       <Footer style={{ textAlign: 'center', }}>
       © 1997-2023 Living Stream Ministry. All rights reserved. Reproduction in whole or in part is prohibited.

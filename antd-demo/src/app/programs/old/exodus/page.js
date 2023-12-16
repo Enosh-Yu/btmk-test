@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Breadcrumb, Layout, Menu, theme, Tabs, Card, Cascader, Button, Flex, Collapse } from 'antd';
 
-import { HomeOutlined, LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons';
+import { HomeOutlined, LeftCircleOutlined, RightCircleOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
@@ -100,7 +100,7 @@ const App = () => {
         </section>
           <h2> Exodus (175) </h2>
           <p>Subject: Christ Is the Redemption, Salvation, and Supply of God's People and the Means for Them to Worship and Serve God So That in Him They May Be Built Up with God Together for Them and God to Meet, Communicate, and Dwell Mutually</p>
-          <Collapse items={items} defaultActiveKey={['1']} onChange={onChange} />
+          <Collapse items={items} onChange={onChange} />
 
       </div>
       
@@ -111,9 +111,9 @@ const App = () => {
         mode="horizontal"
         style={{ background: 'beige', lineHeight: '48px' }}
       >
-        <Menu.Item key="8">Today's Broadcast</Menu.Item>
-        <Menu.Item key="9">Other LSM Sites</Menu.Item>
-        <Menu.Item key="10">Espanol</Menu.Item>
+        <Menu.Item key="8"><Link href="/todays-broadcast" style={{color:"brown"}}><PlayCircleFilled /> Today's Broadcast</Link></Menu.Item>
+        <Menu.Item key="9"><Link href="/links" style={{color:"brown"}}><LinkOutlined /> Other LSM Sites</Link></Menu.Item>
+        <Menu.Item key="10" ><Link href="https://www.radiolsm.com/index.html" style={{color:"brown"}}><TranslationOutlined /> Espanol</Link></Menu.Item>
     </Menu>
       <Footer style={{ textAlign: 'center', }}>
       © 1997-2023 Living Stream Ministry. All rights reserved. Reproduction in whole or in part is prohibited.

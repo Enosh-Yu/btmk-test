@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Breadcrumb, Layout, Menu, theme, Divider, Tabs, Card } from 'antd';
 
-import { HomeOutlined, FilePdfOutlined } from '@ant-design/icons';
+import { HomeOutlined, FilePdfOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
@@ -103,8 +103,12 @@ const App = () => {
         <p>“He therefore who bountifully supplies to you the Spirit...does he do it out of the works of law or out of the hearing of faith?”</p>
         <p style={{textAlign: 'right'}}>Galatians 3:5</p>
       </Card>
-          <p>Life-study of the Bible, a monumental and classic work by Witness Lee, builds upon and is a further development of all that the Lord has revealed to His church in the past centuries. It is filled with the revelation concerning the processed Triune God, the living Christ, the life-giving Spirit, the experience of life, and the definition and practice of the church.</p>
-        <p>Also see "What is the Life-study of the Bible?".</p></div>
+        <p>The Hearing of Faith is a free radio newsletter of Living Stream Ministry that features portions of the ministry of Watchman Nee and Witness Lee, helpful articles concerning crucial items related to scriptural truth and Christian experience and comments from our listeners.</p>
+
+        <p>Back issues of this publication are available online, dating from our first issue in May 1998 until March 2007. Each newsletter is four pages long and can be read online or downloaded.</p>
+
+        <p>If you have any questions or comments please send them to radio@lsm.org.</p>
+        </div>
         <div><img src="hearing-of-faith.png" width="200" height="200"/></div>      
         </section>
    
@@ -125,9 +129,9 @@ const App = () => {
         mode="horizontal"
         style={{ background: 'beige', lineHeight: '48px' }}
       >
-        <Menu.Item key="8">Today's Broadcast</Menu.Item>
-        <Menu.Item key="9">Other LSM Sites</Menu.Item>
-        <Menu.Item key="10">Espanol</Menu.Item>
+        <Menu.Item key="8"><Link href="/todays-broadcast" style={{color:"brown"}}><PlayCircleFilled /> Today's Broadcast</Link></Menu.Item>
+        <Menu.Item key="9"><Link href="/links" style={{color:"brown"}}><LinkOutlined /> Other LSM Sites</Link></Menu.Item>
+        <Menu.Item key="10" ><Link href="https://www.radiolsm.com/index.html" style={{color:"brown"}}><TranslationOutlined /> Espanol</Link></Menu.Item>
     </Menu>
      <Footer style={{ textAlign: 'center', }}>
       © 1997-2023 Living Stream Ministry. All rights reserved. Reproduction in whole or in part is prohibited.

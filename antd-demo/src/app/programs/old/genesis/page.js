@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Breadcrumb, Layout, Menu, theme, Tabs, Card, Cascader, Button, Flex, Collapse } from 'antd';
 
-import { HomeOutlined, LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons';
+import { DownloadOutlined, HomeOutlined, LeftCircleOutlined, RightCircleOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
 
@@ -11,10 +11,11 @@ const items = [
   {
     key: '1',
     label: 'The General Sketch and Central Thought (1)',
-    children: <p>Title: The General Sketch and Central Thought (1)<br/>
+    children: <p><audio preload="none" controls="controls" src="https://www.lsmradio.com/audio/stm-mp3/Genesis/Gen_001.mp3"></audio><br/>Title: The General Sketch and Central Thought (1)<br/>
     Scripture: varied<br/>
     Speaker: WL/RK<br/>
-    Life-study: Message 1</p>,
+    Life-study: Message 1<br/><br/>
+    <Link href="https://www.lsmradio.com/audio/mp3-files/Genesis/Gen_001.mp3" download="Gen_001.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link></p>,
   },
   {
     key: '2',
@@ -101,7 +102,7 @@ const App = () => {
         </section>
           <h2> Genesis (134) </h2>
           <p>Subject: God Created, Satan Corrupted, Man Fell, and Jehovah Promised to Save</p>
-          <Collapse items={items} defaultActiveKey={['1']} onChange={onChange} />
+          <Collapse items={items} onChange={onChange} />
 
       </div>
       
@@ -112,9 +113,9 @@ const App = () => {
         mode="horizontal"
         style={{ background: 'beige', lineHeight: '48px' }}
       >
-        <Menu.Item key="8">Today's Broadcast</Menu.Item>
-        <Menu.Item key="9">Other LSM Sites</Menu.Item>
-        <Menu.Item key="10">Espanol</Menu.Item>
+        <Menu.Item key="8"><Link href="/todays-broadcast" style={{color:"brown"}}><PlayCircleFilled /> Today's Broadcast</Link></Menu.Item>
+        <Menu.Item key="9"><Link href="/links" style={{color:"brown"}}><LinkOutlined /> Other LSM Sites</Link></Menu.Item>
+        <Menu.Item key="10" ><Link href="https://www.radiolsm.com/index.html" style={{color:"brown"}}><TranslationOutlined /> Espanol</Link></Menu.Item>
     </Menu>
       <Footer style={{ textAlign: 'center', }}>
       © 1997-2023 Living Stream Ministry. All rights reserved. Reproduction in whole or in part is prohibited.

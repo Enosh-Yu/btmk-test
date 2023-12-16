@@ -1,11 +1,35 @@
 'use client'
 import Link from 'next/link'
 
-import { Breadcrumb, Layout, Menu, theme, Divider } from 'antd';
+import { Breadcrumb, Layout, Menu, theme, Divider, Collapse, Button} from 'antd';
 
-import { HomeOutlined } from '@ant-design/icons';
+import { HomeOutlined, DownloadOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer } = Layout;
+
+const onChange = (key) => {
+  key;
+};
+
+const items = [
+  {
+    key: '1',
+    label: 'Matthew 1:1',
+    children: <p><audio preload="none" controls="controls" src="https://www.lsmradio.com/scripture-audio/Matthew1_1.mp3"></audio><br/>“The book of the generation of Jesus Christ, the son of David, the son of Abraham:”<br/>
+    ― Matthew 1:1<br/><br/>
+    <Link href="https://www.lsmradio.com/audio/mp3-files/Genesis/Gen_001.mp3" download="Gen_001.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link></p>,
+  },
+  {
+    key: '2',
+    label: 'This is panel header 2',
+    children: <p></p>,
+  },
+  {
+    key: '3',
+    label: 'This is panel header 3',
+    children: <p></p>,
+  },
+];
 
 const App = () => {
   const {
@@ -57,7 +81,7 @@ const App = () => {
 
       <p>* Programs may be downloaded for personal use.</p>
 
-      
+      <Collapse items={items} onChange={onChange} />
       
       
       
@@ -71,9 +95,9 @@ const App = () => {
         mode="horizontal"
         style={{ background: 'beige', lineHeight: '48px' }}
       >
-        <Menu.Item key="8">Today's Broadcast</Menu.Item>
-        <Menu.Item key="9">Other LSM Sites</Menu.Item>
-        <Menu.Item key="10">Espanol</Menu.Item>
+        <Menu.Item key="8"><Link href="/todays-broadcast" style={{color:"brown"}}><PlayCircleFilled /> Today's Broadcast</Link></Menu.Item>
+        <Menu.Item key="9"><Link href="/links" style={{color:"brown"}}><LinkOutlined /> Other LSM Sites</Link></Menu.Item>
+        <Menu.Item key="10" ><Link href="https://www.radiolsm.com/index.html" style={{color:"brown"}}><TranslationOutlined /> Espanol</Link></Menu.Item>
     </Menu>
      <Footer style={{ textAlign: 'center', }}>
       © 1997-2023 Living Stream Ministry. All rights reserved. Reproduction in whole or in part is prohibited.
