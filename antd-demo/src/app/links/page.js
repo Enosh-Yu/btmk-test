@@ -91,12 +91,12 @@ const App = () => {
         <List
           itemLayout="vertical"
           size='small'
-          pagination={{
-          onChange: (page) => {
-          page;
-      },
-      pageSize: 7,
-    }}
+    //       pagination={{
+    //       onChange: (page) => {
+    //       page;
+    //   },
+    //   pageSize: 7,
+    // }}
     dataSource={data}
     
     renderItem={(item) => (
