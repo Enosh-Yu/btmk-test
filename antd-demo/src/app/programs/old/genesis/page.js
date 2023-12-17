@@ -11,21 +11,44 @@ const items = [
   {
     key: '1',
     label: 'The General Sketch and Central Thought (1)',
-    children: <p><audio preload="none" controls="controls" src="https://www.lsmradio.com/audio/stm-mp3/Genesis/Gen_001.mp3"></audio><br/>Title: The General Sketch and Central Thought (1)<br/>
+    children: <p>
+      <section><audio preload="none" controls="controls" src="https://www.lsmradio.com/audio/stm-mp3/Genesis/Gen_001.mp3"></audio> 
+    <p>
+      <Link href="https://www.lsmradio.com/audio/mp3-files/Genesis/Gen_001.mp3" download="Gen_001.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link>
+    </p></section><br/>
+    Title: The General Sketch and Central Thought (1)<br/>
     Scripture: varied<br/>
     Speaker: WL/RK<br/>
-    Life-study: Message 1<br/><br/>
-    <Link href="https://www.lsmradio.com/audio/mp3-files/Genesis/Gen_001.mp3" download="Gen_001.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link></p>,
+    Life-study: Message 1
+    </p>,
   },
   {
     key: '2',
-    label: 'This is panel header 2',
-    children: <p></p>,
+    label: 'The General Sketch and Central Thought (2)',
+    children: <p>
+      <section><audio preload="none" controls="controls" src="https://www.lsmradio.com/audio/stm-mp3/Genesis/Gen_002.mp3"></audio> 
+    <p>
+      <Link href="https://www.lsmradio.com/audio/mp3-files/Genesis/Gen_002.mp3" download="Gen_002.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link>
+    </p></section><br/>
+    Title: The General Sketch and Central Thought (2)<br/>
+    Scripture: varied<br/>
+    Speaker: WL/RK<br/>
+    Life-study: Message 2
+    </p>,
   },
   {
     key: '3',
-    label: 'This is panel header 3',
-    children: <p></p>,
+    label: "Satan's Rebellion and Corruption",
+    children: <p>
+      <section><audio preload="none" controls="controls" src="https://www.lsmradio.com/audio/stm-mp3/Genesis/Gen_003.mp3"></audio> 
+    <p>
+      <Link href="https://www.lsmradio.com/audio/mp3-files/Genesis/Gen_003.mp3" download="Gen_003.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link>
+    </p></section><br/>
+    Title: Satan's Rebellion and Corruption<br/>
+    Scripture: varied<br/>
+    Speaker: WL/RK<br/>
+    Life-study: Message 3
+    </p>,
   },
 ];
 
@@ -94,11 +117,11 @@ const App = () => {
 
       <p>Life-study of the Bible with Witness Lee is a 30-minute radio broadcast composed of excerpts from Witness Lee's spoken ministry that focuses on the enjoyment of the divine life as revealed in the Scriptures. The ministry portions are followed by a discussion of the portion presented, including questions and answers.</p>
         <section>
+          <Flex gap="small" wrap="wrap">
+            <Button disabled="true"><LeftCircleOutlined/>Prev</Button>
+            <Link href="./exodus"><Button>Next<RightCircleOutlined/></Button></Link>
+          </Flex>
           <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
-        <Flex gap="small" wrap="wrap">
-          <Button disabled="true"><LeftCircleOutlined/>Prev</Button>
-          <Link href="./exodus"><Button>Next<RightCircleOutlined/></Button></Link>
-        </Flex>
         </section>
           <h2> Genesis (134) </h2>
           <p>Subject: God Created, Satan Corrupted, Man Fell, and Jehovah Promised to Save</p>

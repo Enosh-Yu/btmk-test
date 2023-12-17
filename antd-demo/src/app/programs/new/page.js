@@ -80,15 +80,32 @@ const App = () => {
       <div style={{ padding: 12, minHeight:240}}>
 
       <section><p>* Programs may be downloaded for personal use.</p>
-      <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
+      <p>
+        <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
+      </p>
       </section>
         <Tabs defaultActiveKey="2" items={items} onChange={onChange} />
           <h2> New Testament </h2>
-              <Card>Matthew</Card>
-              <Card>Mark</Card>
-              <Card>Luke</Card>
-              <Card>John</Card>
-              <Card>Acts</Card>
+              <Card><h3>Matthew</h3>
+              <p>Programs: 75</p>
+              <p>Subject: The Gospel of the Kingdom—Proving That Christ Is the King-Savior</p>
+              </Card>
+              <Card><h3>Mark</h3>
+              <p>Programs: 59</p>
+              <p>Subject: The Gospel of God—Proving That Jesus Christ Is the Slave-Savior</p>
+              </Card>
+              <Card><h3>Luke</h3>
+              <p>Programs: 65</p>
+              <p>Subject: The Gospel of the Forgiveness of Sins—Proving That Jesus Christ is the Man-Savior</p>
+              </Card>
+              <Card><h3>John</h3>
+              <p>Programs: 52</p>
+              <p>Subject: The Gospel of Life Proving That Jesus Christ Is God the Savior Coming as Life to Propagate Himself</p>
+              </Card>
+              <Card><h3>Acts</h3>
+              <p>Programs: 72</p>
+              <p>Subject: The Propagation of the Resurrected Christ in His Ascension, by the Spirit, through the Disciples, for the Producing of the Churches—The Kingdom of God</p>
+              </Card>
 
       </div>
       

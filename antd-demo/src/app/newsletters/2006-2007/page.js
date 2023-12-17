@@ -54,8 +54,6 @@ const items = [
   {
     key: '11',
     label: <Link href="/newsletters/whatis">{'"What is..." Articles'}</Link>,
-
-    label: '"What is..." Articles',
   },
 ];
 
@@ -103,7 +101,7 @@ const App = () => {
         <Tabs defaultActiveKey="2" items={items} onChange={onChange} />
           <h2> 2006 </h2>
           <Card>
-            <h3>March <FilePdfOutlined /></h3>
+            <h3><Link href="/Mar06.pdf">March <FilePdfOutlined /></Link></h3>
           </Card>
           <Card>            
             <h3>September <FilePdfOutlined /></h3>

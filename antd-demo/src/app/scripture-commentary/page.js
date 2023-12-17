@@ -15,19 +15,37 @@ const items = [
   {
     key: '1',
     label: 'Matthew 1:1',
-    children: <p><audio preload="none" controls="controls" src="https://www.lsmradio.com/scripture-audio/Matthew1_1.mp3"></audio><br/>“The book of the generation of Jesus Christ, the son of David, the son of Abraham:”<br/>
-    ― Matthew 1:1<br/><br/>
-    <Link href="https://www.lsmradio.com/audio/mp3-files/Genesis/Gen_001.mp3" download="Gen_001.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link></p>,
+    children: <p><section>
+      <audio preload="none" controls="controls" src="https://www.lsmradio.com/scripture-audio/Matthew1_1.mp3"></audio>
+      <p>
+        <Link href="https://www.lsmradio.com/scripture-audio/Matthew1_1.mp3" download="Matthew1_1.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link>
+      </p>
+    </section><br/>“The book of the generation of Jesus Christ, the son of David, the son of Abraham:”<br/>
+    ― Matthew 1:1
+    </p>,
   },
   {
     key: '2',
-    label: 'This is panel header 2',
-    children: <p></p>,
+    label: 'Matthew 1:23',
+    children: <p><section>
+      <audio preload="none" controls="controls" src="https://www.lsmradio.com/scripture-audio/Matthew1_23.mp3"></audio><p>
+        <Link href="https://www.lsmradio.com/scripture-audio/Matthew1_23.mp3" download="Matthew1_23.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link>
+      </p>
+    </section>
+    <br/>“‘Behold, the virgin shall be with child and shall bear a son, and they shall call His name Emmanuel’ (which is translated, God with us).”<br/>
+    ― Matthew 1:23
+    </p>,
   },
   {
     key: '3',
-    label: 'This is panel header 3',
-    children: <p></p>,
+    label: 'Matthew 5:48',
+    children: <p><section>
+      <audio preload="none" controls="controls" src="https://www.lsmradio.com/scripture-audio/Matthew5_48.mp3"></audio><p>
+        <Link href="https://www.lsmradio.com/scripture-audio/Matthew5_48.mp3" download="Matthew5_48.mp3"> <Button shape="round" size="small">Download this Program<DownloadOutlined/></Button></Link>
+      </p>
+    </section>
+    <br/>You therefore shall be perfect as your heavenly Father is perfect.<br/>― Matthew 5:48
+    </p>,
   },
 ];
 

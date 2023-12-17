@@ -80,7 +80,9 @@ const App = () => {
       <div style={{ padding: 12, minHeight:240}}>
 
       <section><p>* Programs may be downloaded for personal use.</p>
-      <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
+      <p>
+        <Cascader options={options} onChangeCas={onChangeCas} placeholder="Select a Life-study..." />
+      </p>
       </section>
         <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
           <h2> Old Testament </h2>
