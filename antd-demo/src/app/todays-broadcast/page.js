@@ -8,9 +8,9 @@ const { Header, Content, Footer } = Layout;
 
 import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import BtmkHeader from './component/btmkheader';
-import BtmkFooter from './component/btmkfooter';
-import BtmkfootMenu from './component/btmkfootmenu';
+import BtmkHeader from '../component/btmkheader';
+import BtmkFooter from '../component/btmkfooter';
+import BtmkfootMenu from '../component/btmkfootmenu';
 
 const App = () => {
   const {

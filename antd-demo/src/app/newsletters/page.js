@@ -5,9 +5,9 @@ import { Breadcrumb, Layout, Menu, theme, Divider, Tabs, Card } from 'antd';
 
 import { HomeOutlined, FilePdfOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import BtmkHeader from './component/btmkheader';
-import BtmkFooter from './component/btmkfooter';
-import BtmkfootMenu from './component/btmkfootmenu';
+import BtmkHeader from '../component/btmkheader';
+import BtmkFooter from '../component/btmkfooter';
+import BtmkfootMenu from '../component/btmkfootmenu';
 
 const { Header, Content, Footer } = Layout;
 
