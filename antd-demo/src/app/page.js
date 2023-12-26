@@ -9,6 +9,8 @@ const { Header, Content, Footer } = Layout;
 import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
 import BtmkHeader from './component/btmkheader';
+import BtmkFooter from './component/btmkfooter';
+import BtmkfootMenu from './component/btmkfootmenu';
 
 const App = () => {
   const {
@@ -87,7 +89,7 @@ The ministry of <Link href="https://www.watchmannee.org/">Watchman Nee</Link> ha
 <p>  </p></section>
 </div>
     </Content>
-    <Menu
+    {/* <Menu
         mode="horizontal"
         style={{ background: 'beige', lineHeight: '48px' }}
       >
@@ -97,7 +99,9 @@ The ministry of <Link href="https://www.watchmannee.org/">Watchman Nee</Link> ha
     </Menu>
       <Footer style={{ textAlign: 'center', }}>
       © 1997-2023 Living Stream Ministry. All rights reserved. Reproduction in whole or in part is prohibited.
-      </Footer>
+      </Footer> */}
+      <BtmkfootMenu />
+      <BtmkFooter />
     </Layout>
   );
 };

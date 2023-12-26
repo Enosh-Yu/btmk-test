@@ -7,7 +7,7 @@ const { Header, Content, Footer } = Layout;
 import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
 
-export default function BtmkHeader() {
+export default function BtmkHeader({}) {
   return (
 
     <Header>
