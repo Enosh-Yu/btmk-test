@@ -8,6 +8,7 @@ const { Header, Content, Footer } = Layout;
 
 import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
+import BtmkHeader from './component/btmkheader';
 
 const App = () => {
   const {
@@ -38,7 +39,7 @@ const App = () => {
         />
         <div className="menu" /> */}
 
-    <Header>
+    {/* <Header>
       <div className="menu" />
 
       <Menu
@@ -55,7 +56,9 @@ const App = () => {
         <Menu.Item key="6"><Link href="/scripture-commentary">Scripture & Commentary</Link></Menu.Item>
         <Menu.Item key="7"><Link href="/contact-us">Contact Us</Link></Menu.Item>
       </Menu>
-    </Header>
+    </Header> */}
+
+    <BtmkHeader />
 
       <div style={{ background: 'beige', padding: 12, minHeight: 90, textAlign: 'right'}}>
         <h2>Life-study of the Bible<br></br>
