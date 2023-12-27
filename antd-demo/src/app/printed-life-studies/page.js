@@ -19,7 +19,7 @@ const App = () => {
    return (
     <Layout className="layout">
 
-      <BtmkHeader />
+      <BtmkHeader keys="3" />
 
       <div style={{ background: 'beige', minHeight: 30 }}>
         <h2>Printed Life-studies</h2></div>

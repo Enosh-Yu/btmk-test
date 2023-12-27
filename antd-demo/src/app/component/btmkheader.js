@@ -6,8 +6,7 @@ const { Header, Content, Footer } = Layout;
 
 import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-
-export default function BtmkHeader({}) {
+export default function BtmkHeader({keys}) {
   return (
 
     <Header>
@@ -16,7 +15,7 @@ export default function BtmkHeader({}) {
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={['1']}
+        defaultSelectedKeys={[keys]}
         style={{ lineHeight: '64px' }}
       >
         <Menu.Item key="1"><Link href="/"><HomeOutlined /></Link></Menu.Item>
