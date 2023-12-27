@@ -9,22 +9,25 @@ import BtmkHeader from '../component/btmkheader';
 import BtmkFooter from '../component/btmkfooter';
 import BtmkfootMenu from '../component/btmkfootmenu';
 
+import { options } from '../data/dataprogramselect';
+
 const { Header, Content, Footer } = Layout;
 
-const options = [
-  {
-    value: 'Old Testament',
-    label: 'Old Testament',
-  },
-  {
-    value: 'Genesis',
-    label: <Link href="/programs/old/genesis">{'Genesis'}</Link>,
-  },
-  {
-    value: 'Exodus',
-    label: <Link href="/programs/old/exodus">{'Exodus'}</Link>,
-  },
-];
+// const options = [
+//   {
+//     value: 'Old Testament',
+//     label: 'Old Testament',
+//   },
+//   {
+//     value: 'Genesis',
+//     label: <Link href="/programs/old/genesis">{'Genesis'}</Link>,
+//   },
+//   {
+//     value: 'Exodus',
+//     label: <Link href="/programs/old/exodus">{'Exodus'}</Link>,
+//   },
+// ];
+
 const onChangeCas = (value) => {
   value;
 };

@@ -9,7 +9,7 @@ import BtmkHeader from '../../component/btmkheader';
 import BtmkFooter from '../../component/btmkfooter';
 import BtmkfootMenu from '../../component/btmkfootmenu';
 
-import { items } from '../../data/dataconst'
+import { items } from '../../data/datanewsletters'
 
 const { Header, Content, Footer } = Layout;
 
