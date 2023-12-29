@@ -5,7 +5,7 @@ import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
 import { HomeOutlined, PhoneOutlined, MailOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import BtmkHeader from '../component/btmkheader';
+import BtmkHeaderNew from '../component/btmkheader_new';
 import BtmkFooter from '../component/btmkfooter';
 import BtmkfootMenu from '../component/btmkfootmenu';
 
@@ -19,7 +19,7 @@ const App = () => {
    return (
     <Layout className="layout">
 
-      <BtmkHeader keys="7" />
+      <BtmkHeaderNew keys="7" />
 
       <div style={{ background: 'beige', minHeight: 30 }}>
         <h2>Contact Us</h2></div>

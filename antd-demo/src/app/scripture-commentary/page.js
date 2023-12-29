@@ -5,7 +5,7 @@ import { Breadcrumb, Layout, Menu, theme, Divider, Collapse, Button} from 'antd'
 
 import { HomeOutlined, DownloadOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import BtmkHeader from '../component/btmkheader';
+import BtmkHeaderNew from '../component/btmkheader_new';
 import BtmkFooter from '../component/btmkfooter';
 import BtmkfootMenu from '../component/btmkfootmenu';
 
@@ -61,7 +61,7 @@ const App = () => {
    return (
     <Layout className="layout">
       
-      <BtmkHeader keys="6" />
+      <BtmkHeaderNew keys="6"/>
       
       <div style={{ background: 'beige', minHeight: 30 }}>
         <h2>Scripture & Commentary</h2></div>

@@ -8,7 +8,7 @@ const { Header, Content, Footer } = Layout;
 
 import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import BtmkHeader from './component/btmkheader';
+import BtmkHeaderNew from './component/btmkheader_new';
 import BtmkFooter from './component/btmkfooter';
 import BtmkfootMenu from './component/btmkfootmenu';
 
@@ -35,11 +35,12 @@ const App = () => {
             const Topmenu = ['Home', 'Programs', 'Printed Life-studies', 'Schedule', 'Newsletters', 'Scripture & Commentary', 'Contact Us'];
             return {
               key,
-              label: Topmenu[key-1],       
+              label: <Link href={"/"+Topmenu[index]}>{Topmenu[index]}</Link>
             };
           })}
         />
-        <div className="menu" /> */}
+        <div className="menu" /> 
+        </Header>*/}
 
     {/* <Header>
       <div className="menu" />
@@ -60,7 +61,7 @@ const App = () => {
       </Menu>
     </Header> */}
 
-    <BtmkHeader keys="1" />
+    <BtmkHeaderNew keys="1" />
 
       <div style={{ background: 'beige', padding: 12, minHeight: 90, textAlign: 'right'}}>
         <h2>Life-study of the Bible<br></br>

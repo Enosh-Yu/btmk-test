@@ -8,7 +8,7 @@ const { Header, Content, Footer } = Layout;
 
 import { HomeOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import BtmkHeader from './component/btmkheader';
+import BtmkHeaderNew from './component/btmkheader_new';
 import BtmkFooter from './component/btmkfooter';
 import BtmkfootMenu from './component/btmkfootmenu';
 
@@ -57,7 +57,7 @@ const App = () => {
   return (
     <Layout className="layout">
 
-      <BtmkHeader />
+      <BtmkHeaderNew />
 
       <div style={{ background: 'beige', padding: 12, minHeight: 90}}>
         <h2>Other LSM Websites</h2>
