@@ -5,7 +5,7 @@ import { Breadcrumb, Layout, Menu, theme, Divider, Tabs, Button, Flex, Card } fr
 
 import { HomeOutlined, FilePdfOutlined, LeftCircleOutlined, RightCircleOutlined, UnorderedListOutlined, PlayCircleFilled, LinkOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import BtmkHeaderNew from '../../component/btmkheader_new';
+import BtmkHeaderNew from '../../../component/btmkheader_new';
 import BtmkFooter from '../../../component/btmkfooter';
 import BtmkfootMenu from '../../../component/btmkfootmenu';
 

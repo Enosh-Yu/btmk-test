@@ -45,7 +45,7 @@ const App = () => {
         <Tabs defaultActiveKey="2" items={items} onChange={onChange} />
           <h2> 2006 </h2>
           <Card>
-            <h3><Link href="/Mar06.pdf">March <FilePdfOutlined /></Link></h3>
+            <h3><Link href="https://www.lsmradio.com/hearing-of-faith/pdf/2006-2007/Mar06.pdf">March <FilePdfOutlined /></Link></h3>
           </Card>
           <Card>            
             <h3>September <FilePdfOutlined /></h3>
